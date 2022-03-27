@@ -1,0 +1,82 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>predict</title>
+        <meta charset="utf-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale =1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/boostrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src ="https://maxcdn.bootstrapcdn.com/boostrap/3.4.1/js/boostrap.min.js"></script>
+
+        <style>
+            body{
+                background-image: url("{%static 'fake news background.jpg'%}");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            .main{
+           
+            position:fixed;
+            top:90px;
+            left:320px;
+            width:700px;
+            background-color:gainsboro;
+            align-items:center;
+            border-radius:5%;
+        }
+        .button{
+            text-align: center;
+        }
+        div{
+            padding:15px;
+            align-items: center;
+        }
+        input[type=submit]{
+            background-color:Black;
+            color:white;
+            cursor:pointer;
+            padding: 16px 32px;
+        }
+        h1{
+            font-size:40px;
+        }
+        h2{
+            font-size:30px;
+            color:DarkRed;
+        }
+        text{
+            font-size: large;
+
+        }
+       
+        </style>
+    </head>
+    <body>
+    <div class ="main">
+        <h1>Please Enter The Following values:</h1>
+        <form action="result">
+            <div class="row">
+                <div class="col-sm-1" style="background-color: bisque;">
+                <p>Title</p>
+                <input type="text" name="n1">
+                </div>
+                <div class="col-sm-1" style="background-color: bisque;">
+                    <p>Text Content </p>
+                    <input type="text" name="n2">
+                </div>
+                
+            </div>
+            <div class="button">
+                <input type="submit" value="PREDICT">
+            </div>
+        </form>
+        <div class="row">
+            <h2>{{result2}}</h2>
+        </div>
+
+    </div>
+    </body>
+</html>
